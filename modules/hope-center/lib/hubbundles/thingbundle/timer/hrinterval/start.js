@@ -41,6 +41,10 @@ shared.sensor = {
     this.pause();
   },
   resume: function() {
+    if (this.timer) {
+      this.timer.clearInterval();
+      this.timer = null;
+    }
     NanoTimer = require("nanotimer");
     this.timer = new NanoTimer();
     this.timer.setInterval(this.callback, "", this.interval + "us");

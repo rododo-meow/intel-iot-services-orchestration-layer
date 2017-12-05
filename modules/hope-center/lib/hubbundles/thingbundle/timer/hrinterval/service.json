@@ -2,8 +2,8 @@
   "name": "hrinterval",
   "description": "send signal 1 at intervals(us)",
   "spec": {
-    "id": "__HOPE__/builtin/timer/interval",
-    "name": "interval_spec",
+    "id": "__HOPE__/builtin/timer/hrinterval",
+    "name": "hrinterval_spec",
     "in": {
       "ports": [
         {

@@ -1,0 +1,4 @@
+{
+  "hrinterval": "高精度间隔触发",
+  "send signal 1 at intervals": "每隔‘interval’us，发送1"
+}

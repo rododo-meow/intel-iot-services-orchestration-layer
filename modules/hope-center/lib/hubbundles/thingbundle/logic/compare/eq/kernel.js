@@ -24,6 +24,5 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
-var ret = (IN.in1 == IN.in2);
-console.log("==:", IN.in1, IN.in2, "result:", ret);
-sendOUT({bool: ret});
+var ret = IN.in1 == IN.in2;
+sendOUT({ bool: ret });

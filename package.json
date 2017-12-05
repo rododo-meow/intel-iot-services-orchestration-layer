@@ -1,31 +1,29 @@
 {
   "name": "iot-sol",
   "version": "2.0.3",
-  "description": "Intel(r) IoT Services Orchestration Layer - HTML5 IDE + Node.js middleware to create and host distributed IoT Apps in minutes",
+  "description":
+    "Intel(r) IoT Services Orchestration Layer - HTML5 IDE + Node.js middleware to create and host distributed IoT Apps in minutes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/01org/intel-iot-services-orchestration-layer.git"
+    "url":
+      "git+https://github.com/01org/intel-iot-services-orchestration-layer.git"
   },
-  "keywords": [
-    "iot",
-    "graphical",
-    "programming",
-    "app",
-    "dev"
-  ],
+  "keywords": ["iot", "graphical", "programming", "app", "dev"],
   "author": {
     "name": "Jonathan Ding",
     "email": "jonathan.ding@intel.com"
   },
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/01org/intel-iot-services-orchestration-layer/issues"
+    "url":
+      "https://github.com/01org/intel-iot-services-orchestration-layer/issues"
   },
-  "homepage": "https://github.com/01org/intel-iot-services-orchestration-layer#readme",
+  "homepage":
+    "https://github.com/01org/intel-iot-services-orchestration-layer#readme",
   "dependencies": {
     "MD5": "^1.3.0",
     "body-parser": "^1.13.3",
@@ -69,7 +67,19 @@
     "tgz.js": "^1.0.7",
     "ipaddr.js": "^1.1.0",
     "clone": "1.0.2",
-    "mongodb": "^2.0.46"
+    "mongodb": "^2.0.46",
+    "hope-base": "file:./modules/hope-base",
+    "hope-center": "file:./modules/hope-center",
+    "hope-entity": "file:./modules/hope-entity",
+    "hope-entity-store": "file:./modules/hope-entity-store",
+    "hope-http-broker": "file:./modules/hope-http-broker",
+    "hope-hub": "file:./modules/hope-hub",
+    "hope-hub-center-shared": "file:./modules/hope-hub-center-shared",
+    "hope-message": "file:./modules/hope-message",
+    "hope-session-manager": "file:./modules/hope-session-manager",
+    "hope-store": "file:./modules/hope-store",
+    "hope-workflow": "file:./modules/hope-workflow",
+    "hope-demo": "file:./modules/hope-demo"
   },
   "bundledDependencies": [
     "hope-base",

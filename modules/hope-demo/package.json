@@ -30,6 +30,7 @@
   "dependencies": {
     "lodash": "^4.6.1",
     "request": "^2.60.0",
-    "mqtt": "^1.7.3"
+    "mqtt": "^1.7.3",
+    "nanotimer": "^0.3.15"
   }
 }

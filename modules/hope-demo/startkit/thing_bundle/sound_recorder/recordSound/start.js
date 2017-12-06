@@ -28,7 +28,6 @@ var m = require("mraa");
 var NanoTimer = require("nanotimer");
 shared.pin = new m.Aio(CONFIG.pin);
 shared.enable = false;
-shared.timestamp = 0;
 shared.timer = new NanoTimer();
 shared.step = Math.floor(1000000000 / 44000);
 done();

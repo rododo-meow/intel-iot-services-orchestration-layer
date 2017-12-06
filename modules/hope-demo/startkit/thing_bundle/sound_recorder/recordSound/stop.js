@@ -1,0 +1,2 @@
+shared.timer.clearInterval();
+done();

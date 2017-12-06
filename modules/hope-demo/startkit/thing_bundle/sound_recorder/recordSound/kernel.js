@@ -24,22 +24,21 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
-var value = shared.pin.read();
-console.log("measure sound:", value, CONFIG.pin);
-sendOUT({ value: value });
-
 if (IN.enable && !shared.enable) {
   // Enable
   shared.duration = IN.duration;
   shared.pcm = [];
-  NanoTimer = require("nanotimer");
-  shared.timer.setInterval(function() {
-    shared.pcm.push(shared.pin.readFloat());
-    if (shared.pcm.length * shared.step > shared.duration * 1000000000) {
-      console.log(shared.pcm);
-      shared.pcm = [];
-    }
-  }, shared.step + "n");
+  shared.timer.setInterval(
+    function() {
+      shared.pcm.push(shared.pin.readFloat());
+      if (shared.pcm.length * shared.step > shared.duration * 1000000000) {
+        console.log(shared.pcm);
+        shared.pcm = [];
+      }
+    },
+    "",
+    shared.step + "n"
+  );
 }
 if (!IN.enable && shared.enable) {
   // Disable

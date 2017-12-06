@@ -25,16 +25,12 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
 
-console.log("Hrinterval init");
-
 shared.sensor = {
   timer: null,
   interval: 1000,
   callback: function() {},
   pause: function() {
-    if (this.timer) {
-      this.timer.clearInterval();
-    }
+    if (this.timer) this.timer.clearInterval();
     this.timer = null;
   },
   stop: function() {
@@ -47,7 +43,7 @@ shared.sensor = {
     }
     NanoTimer = require("nanotimer");
     this.timer = new NanoTimer();
-    this.timer.setInterval(this.callback, "", this.interval + "us");
+    this.timer.setInterval(this.callback, "", this.interval + "u");
   },
   start: function(cb, interval) {
     if (this.interval !== interval || this.callback !== cb) {

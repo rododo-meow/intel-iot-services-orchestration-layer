@@ -1,0 +1,31 @@
+{
+  "id": "spec_sound_recorder",
+  "name": "spec_sound_recorder",
+  "in": {
+    "ports": [
+      {
+        "name": "enable",
+        "type": "boolean"
+      },
+      {
+        "name": "duration",
+        "type": "number"
+      }
+    ]
+  },
+  "out": {
+    "ports": [
+      {
+        "name": "wav",
+        "type": "string"
+      }
+    ]
+  },
+  "config": [
+    {
+      "name": "pin",
+      "type": "int",
+      "required": true
+    }
+  ]
+}

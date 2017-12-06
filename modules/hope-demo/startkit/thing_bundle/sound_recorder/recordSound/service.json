@@ -1,0 +1,6 @@
+{
+  "name": "recordSound",
+  "description": "record sound to wav format",
+  "spec": "spec_sound_recorder",
+  "ui": {}
+}

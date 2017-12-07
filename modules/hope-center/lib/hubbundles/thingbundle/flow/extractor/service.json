@@ -1,0 +1,25 @@
+{
+  "name": "extractor",
+  "description": "Send out msg.payload",
+  "spec": {
+    "id": "__HOPE__/builtin/flow/extractor",
+    "name": "extractor_spec",
+    "in": {
+      "ports": [
+        {
+          "name": "msg",
+          "type": "any"
+        }
+      ]
+    },
+    "out": {
+      "ports": [
+        {
+          "name": "out",
+          "type": "any"
+        }
+      ]
+    }
+  },
+  "ui": {}
+}

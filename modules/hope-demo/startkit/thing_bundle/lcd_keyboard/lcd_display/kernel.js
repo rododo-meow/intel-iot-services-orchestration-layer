@@ -26,6 +26,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
 
 var content = IN.content + "";
-while (content.length < 16) content += " ";
+while (content.length < 80) content += " ";
 shared.lcd.write(content);
 shared.lcd.setRGB(IN.r, IN.g, IN.b);

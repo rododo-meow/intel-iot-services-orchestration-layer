@@ -25,5 +25,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
 
-shared.lcd.write(IN.content);
+var content = IN.content + "";
+while (content.length < 16) content += " ";
+shared.lcd.write(content);
 shared.lcd.setRGB(IN.r, IN.g, IN.b);

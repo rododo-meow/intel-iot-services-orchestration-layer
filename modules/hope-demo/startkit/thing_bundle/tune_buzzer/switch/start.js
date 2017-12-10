@@ -133,7 +133,7 @@ Player.prototype.setVolume = function(volume) {
   if (volume > 0.3) volume = 0.3;
   this.pwm.write(volume);
 };
-Player.prototype.sPlaying = function() {
+Player.prototype.isPlaying = function() {
   return this.playing != null;
 };
 shared.player = new Player(CONFIG.pin);

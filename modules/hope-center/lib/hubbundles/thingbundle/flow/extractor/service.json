@@ -19,7 +19,14 @@
           "type": "any"
         }
       ]
-    }
+    },
+    "config": [
+      {
+        "name": "field",
+        "type": "string",
+        "required": true
+      }
+    ]
   },
   "ui": {}
 }

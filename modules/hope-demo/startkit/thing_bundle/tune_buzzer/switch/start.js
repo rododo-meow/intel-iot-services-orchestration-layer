@@ -85,7 +85,7 @@ function parseTune(s) {
   return tune[ret];
 }
 Player = function(pin) {
-  this.pwm = m.Pwm(pin);
+  this.pwm = new m.Pwm(pin);
   this.playing = null;
   this.setVolume(0.005);
   return this;

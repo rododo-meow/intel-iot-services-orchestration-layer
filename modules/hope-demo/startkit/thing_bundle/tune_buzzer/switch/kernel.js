@@ -38,4 +38,6 @@ if (IN.on) {
     shared.player.play(CONFIG.path).then(function() {
       sendOUT({ out: true });
     });
-} else shared.player.stop();
+} else {
+  if (shared.player.isPlaying()) shared.player.stop();
+}

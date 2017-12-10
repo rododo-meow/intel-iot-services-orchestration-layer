@@ -87,12 +87,13 @@ function parseTune(s) {
 Player = function(pin) {
   this.pwm = new m.Pwm(pin);
   this.playing = null;
+  this.volume = 0;
   this.setVolume(0.005);
   return this;
 };
 Player.prototype.play = function(path) {
+  var that = this;
   return new Promise(function(resolve, reject) {
-    var that = this;
     if (this.playing != null) this.stop();
     var music = JSON.parse(fs.readFileSync(path));
     var T = 60000 / music[0] * 4;
@@ -120,9 +121,9 @@ Player.prototype.stop = function() {
 Player.prototype.buzzerSound = function(freq) {
   if (freq < 10 || freq > 20000) this.buzzerQuiet();
   else {
-    //    this.pwm.enable(false);
+    this.pwm.enable(false);
     this.pwm.period_us(1000000 / freq);
-    //    this.pwm.enable(true);
+    this.pwm.enable(true);
   }
 };
 Player.prototype.buzzerQuiet = function() {
@@ -131,7 +132,9 @@ Player.prototype.buzzerQuiet = function() {
 Player.prototype.setVolume = function(volume) {
   if (volume < 0) volume = 0;
   if (volume > 0.3) volume = 0.3;
+  if (volume == this.volume) return;
   this.pwm.write(volume);
+  this.volume = volume;
 };
 Player.prototype.isPlaying = function() {
   return this.playing != null;

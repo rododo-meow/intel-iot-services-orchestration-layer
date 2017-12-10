@@ -1,0 +1,2 @@
+shared.player.stop();
+done();

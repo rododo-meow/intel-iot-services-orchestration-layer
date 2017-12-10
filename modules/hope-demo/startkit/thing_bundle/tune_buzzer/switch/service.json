@@ -1,0 +1,41 @@
+{
+  "name": "switch",
+  "description": "turn on or off the buzzer. status = on",
+  "spec": {
+    "id": "tune_buzzer_spec",
+    "name": "tune_buzzer_spec",
+    "in": {
+      "ports": [
+        {
+          "name": "on",
+          "type": "boolean"
+        },
+        {
+          "name": "volume",
+          "type": "number"
+        }
+      ]
+    },
+    "out": {
+      "ports": [
+        {
+          "name": "finish",
+          "type": "boolean"
+        }
+      ]
+    },
+    "config": [
+      {
+        "name": "pin",
+        "type": "int",
+        "required": true
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "required": true
+      }
+    ]
+  },
+  "ui": {}
+}

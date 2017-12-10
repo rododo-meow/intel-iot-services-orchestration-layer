@@ -126,12 +126,15 @@ Player.prototype.buzzerSound = function(freq) {
   }
 };
 Player.prototype.buzzerQuiet = function() {
-  pwm.enable(false);
+  this.pwm.enable(false);
 };
 Player.prototype.setVolume = function(volume) {
   if (volume < 0) volume = 0;
   if (volume > 0.3) volume = 0.3;
-  pwm.write(volume);
+  this.pwm.write(volume);
+};
+Player.prototype.sPlaying = function() {
+  return this.playing != null;
 };
 shared.pin = new Player(CONFIG.pin);
 done();

@@ -26,6 +26,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
 shared.player.setVolume(IN.volume);
 if (IN.on) {
+  if (shared.player.isPlaying()) return;
   if (CONFIG.loop) {
     function loop() {
       shared.player.play(CONFIG.path).then(function() {

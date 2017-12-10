@@ -24,15 +24,6 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
-console.log("lcd_display", IN.content);
-var spawn = require("child_process").spawn;
-var child = spawn("./lcd", [IN.content], {cwd: __dirname});
 
-child.on("exit", function(code) {
-  if (code === 0) {
-    sendOUT({status: true});
-  } else {
-    sendOUT({status: false});
-    sendERR("lcd fail");
-  }
-});
+shared.lcd.write(IN.content);
+shared.lcd.setRGB(IN.r, IN.g, IN.b);

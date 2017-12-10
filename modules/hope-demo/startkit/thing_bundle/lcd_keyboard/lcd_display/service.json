@@ -1,9 +1,29 @@
 {
   "name": "lcd_display",
   "description": "show the content in the LCD screen",
-  "spec":"lcd_1_1_startkit",
-  "ui": {
-
+  "spec": {
+    "id": "lcd_spec",
+    "name": "lcd_spec",
+    "in": {
+      "ports": [
+        {
+          "name": "content",
+          "type": "string"
+        },
+        {
+          "name": "r",
+          "type": "number"
+        },
+        {
+          "name": "g",
+          "type": "number"
+        },
+        {
+          "name": "b",
+          "type": "number"
+        }
+      ]
+    }
   },
-  "doc":"startkit/lcd_keyboard.html#lcd_display"
+  "ui": {}
 }

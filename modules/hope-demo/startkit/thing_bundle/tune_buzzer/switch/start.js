@@ -136,5 +136,5 @@ Player.prototype.setVolume = function(volume) {
 Player.prototype.sPlaying = function() {
   return this.playing != null;
 };
-shared.pin = new Player(CONFIG.pin);
+shared.player = new Player(CONFIG.pin);
 done();

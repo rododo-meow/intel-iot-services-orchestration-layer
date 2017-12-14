@@ -1,0 +1,2 @@
+shared.lcd.shutdown();
+done();

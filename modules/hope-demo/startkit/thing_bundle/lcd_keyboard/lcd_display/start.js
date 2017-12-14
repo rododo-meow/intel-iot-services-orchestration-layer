@@ -118,6 +118,11 @@ LCD.prototype.display = function() {
   this.displayCtrl |= LCD_DISPLAYON;
   this.command(LCD_DISPLAYCONTROL | this.displayCtrl);
 };
+LCD.prototype.shutdown = function() {
+  this.displayCtrl &= ~LCD_DISPLAYON;
+  this.command(LCD_DISPLAYCONTROL | this.displayCtrl);
+  this.setRGBReg(REG_OUTPUT, 0);
+};
 shared.lcd = new LCD();
 shared.lcd.begin().then(function() {
   done();
